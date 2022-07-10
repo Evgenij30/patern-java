@@ -12,7 +12,7 @@ public class homework02 {
     }
 }
 
-/* Task 01: apply SafeDelete refactorings to not used code parts */
+/* TODO: Task 01: apply SafeDelete refactorings to not used code parts */
 class Task01SafeDelete {
 
     private final int usedInput;
@@ -36,7 +36,7 @@ class Task01SafeDelete {
     // }
 }
 
-/* Task 02: apply Rename refactorings */
+/* TODO: Task 02: apply Rename refactorings as specified in comments */
 class Task02Rename { // rename class name also considering the name in string
 
     private final int usedInput;
@@ -53,7 +53,7 @@ class Task02Rename { // rename class name also considering the name in string
         }
 }
 
-/* Task 03: apply extract refactorings as specified in code */
+/* TODO: Task 03: apply extract refactorings as specified in comments */
 class Task03Extract {
 
     private final int first;
@@ -108,7 +108,7 @@ class Task03Extract {
     }
 }
 
-/* Task 04: apply inline refactorings as specified in code */
+/* TODO: Task 04: apply inline refactorings as specified in comments */
 class Task04Inline {
 
     // inline field
