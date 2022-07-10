@@ -6,7 +6,8 @@ public class homework02 {
         System.out.println("Starting Homework 02");
 
         new Task01SafeDelete(10, 20).execute(42);
-        new Task02Extract(20).execute(11);
+        new Task02Rename(20).call(11);
+        new Task03Extract(20).execute(11);
     }
 }
 
@@ -34,12 +35,29 @@ class Task01SafeDelete {
     // }
 }
 
-/* Task 02: apply extract refactorings as specified in code */
-class Task02Extract {
+/* Task 02: apply Rename refactorings */
+class Task02Rename { // rename class name also considering the name in string
+
+    private final int usedInput;
+
+    public Task02Rename(int input){
+            this.usedInput = input; // rename field to match parameter name
+
+            System.out.println("Task02Rename initialized with " + input);
+        }
+
+        // rename method from "call" to "execute"
+        public void call(int i) { // rename parameter "i" to "param"
+            System.out.println("Task02Rename executed with " + i);
+        }
+}
+
+/* Task 03: apply extract refactorings as specified in code */
+class Task03Extract {
 
     private final int first;
 
-    public Task02Extract(int first){
+    public Task03Extract(int first){
         this.first = first;
     }
     public void execute(int second) {
