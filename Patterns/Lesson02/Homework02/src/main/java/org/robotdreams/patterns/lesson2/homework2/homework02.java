@@ -8,6 +8,7 @@ public class homework02 {
         new Task01SafeDelete(10, 20).execute(42);
         new Task02Rename(20).call(11);
         new Task03Extract(20).execute(11);
+        new Task04Inline(20).execute(11);
     }
 }
 
@@ -104,5 +105,26 @@ class Task03Extract {
 
     private void print(String name, int a, int b, int result) {
         System.out.println(String.join("",name,"(",Integer.toString(a),",",Integer.toString(b),")=",Integer.toString(result)));
+    }
+}
+
+/* Task 04: apply inline refactorings as specified in code */
+class Task04Inline {
+
+    // inline field
+    private final int first;
+
+    public Task04Inline(int first){
+        this.first = first;
+
+        print("initialized", first);
+    }
+    public void execute(int second) {
+        print("executed", second);
+    }
+
+    // inline method "print"
+    private void print(String operation, int param) {
+        System.out.println("Task04Inline " + operation + " with " + param);
     }
 }
