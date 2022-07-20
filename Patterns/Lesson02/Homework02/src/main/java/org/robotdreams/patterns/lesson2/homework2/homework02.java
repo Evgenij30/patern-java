@@ -28,7 +28,7 @@ class Task01SafeDelete {
     public void execute(int i) { print("executed", i, 2);}
 
     private void print(String operation, int usedParam, int unusedParam) {
-        System.out.println("SafeDeleteExample " + operation + " with " + usedInput);
+        System.out.println("SafeDeleteExample " + operation + " with " + usedParam);
     }
 
     // private void printTest(int usedParam, int unusedParam) {
