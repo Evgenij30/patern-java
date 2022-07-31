@@ -5,8 +5,8 @@ public class homework02 {
     public static void main(String[] args) {
         System.out.println("Starting Homework 02");
 
-        new Task01SafeDelete().execute(42);
-        new TaskNewName(20).call(11);
+        new Task01SafeDelete(10, 20).execute(42);
+        new TaskNewName(20).execute(11);
         new Task03Extract(20).execute(11);
         new Task04Inline(20).execute(11);
     }
@@ -14,6 +14,17 @@ public class homework02 {
 
 /* TODO: Task 01: apply SafeDelete refactorings to not used code parts */
 class Task01SafeDelete {
+
+    private final int usedInput;
+    private final int unusedInput;
+
+    public Task01SafeDelete(int usedInput, int unusedInput) {
+
+        this.usedInput = usedInput;
+        this.unusedInput = unusedInput;
+
+        print("initialized", usedInput);
+    }
 
     public void execute(int i) { print("executed", i);}
 
@@ -34,7 +45,7 @@ class TaskNewName { // rename class name also considering the name in string
         }
 
         // rename method from "call" to "execute"
-        public void call(int i) { // rename parameter "i" to "param"
+        public void execute(int i) { // rename parameter "i" to "param"
             System.out.println("TaskNewName executed with " + i);
         }
 }
@@ -42,7 +53,7 @@ class TaskNewName { // rename class name also considering the name in string
 /* TODO: Task 03: apply extract refactorings as specified in comments */
 class Task03Extract {
 
-    public static final int theAnswerToTheUltimateQuestion = 42;
+    public static final int ANSWER_ULTIMATE_QUESTION = 42;
     private final int first;
 
     public Task03Extract(int first){
@@ -76,9 +87,9 @@ class Task03Extract {
                 add(first , second)
         );
         print("add",
-                theAnswerToTheUltimateQuestion,
+                ANSWER_ULTIMATE_QUESTION,
                 second,
-                add(theAnswerToTheUltimateQuestion , second)
+                add(ANSWER_ULTIMATE_QUESTION , second)
         );
 
         print("subtract",
@@ -88,9 +99,9 @@ class Task03Extract {
         );
 
         print("subtract",
-                theAnswerToTheUltimateQuestion,
+                ANSWER_ULTIMATE_QUESTION,
                 second,
-                subtract( theAnswerToTheUltimateQuestion, second)
+                subtract( ANSWER_ULTIMATE_QUESTION, second)
         );
 
         print("multiply",
